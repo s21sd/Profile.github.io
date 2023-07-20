@@ -147,9 +147,9 @@
         </div>
       </div>
 
-<!--       <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <button class="w3-button w3-light-grey w3-padding-large w3-section resumeDownload">
         <i class="fa fa-download"></i> Download Resume
-      </button> -->
+      </button>
 
       <!-- Grid for pricing tables -->
       <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
@@ -312,5 +312,22 @@
   </div>
 
 </body>
+  <script>
+  const resumeDownload = document.querySelector(".resumeDownload");
+  const fileUrl = 'https://drive.google.com/file/d/1vySziFzFOrunsYSnzgyBO774QafQ5_MD/view?usp=sharing'
+
+  const DownloadResume = () => {
+    const anchor = document.createElement('a');
+    anchor.href = fileUrl;
+    anchor.download = fileUrl.split("/Sunny's Resume").pop();
+    anchor.click();
+  }
+
+
+
+
+  resumeDownload.addEventListener("click", DownloadResume);
+
+</script>
 
 </html>
