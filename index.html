@@ -322,27 +322,28 @@
   </div>
 
 </body>
-  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-  <script>
-  const resumeDownload = document.querySelector(".resumeDownload");
-  const fileUrl = 'https://drive.google.com/file/d/1vySziFzFOrunsYSnzgyBO774QafQ5_MD/view?usp=sharing'
+ <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    const resumeDownload = document.querySelector(".resumeDownload");
 
-  const DownloadResume = () => {
-    const anchor = document.createElement('a');
-    anchor.href = fileUrl;
-    anchor.download = fileUrl.split("/Sunny's Resume").pop();
-    anchor.click();
+    const fileUrl = 'https://drive.google.com/file/d/1vySziFzFOrunsYSnzgyBO774QafQ5_MD/view?usp=sharing'
 
-  resumeDownload.addEventListener("click", DownloadResume);
+    const DownloadResume = () => {
+        const anchor = document.createElement('a');
+        anchor.href = fileUrl;
+        anchor.download = fileUrl.split("/Sunny's Resume").pop();
+        anchor.click();
+    }
 
-     let typed = new Typed(".namechage", {
-    strings: ["a Web Developer", "a Coder", "a Learner"],
-    typeSpeed: 150,
-    backSpeed: 150,
-    loop: true,
 
-  });
+    resumeDownload.addEventListener("click", DownloadResume);
+    let typed = new Typed(".namechage", {
+        strings: ["a Web Developer", "a Coder", "a Learner"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
 
+    });
 </script>
 
 </html>
